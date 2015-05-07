@@ -3,6 +3,8 @@ package org.bbs.android.floatwindow;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +21,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new AlwaysOnTopWindow(this).show();
+        // use appliction context
+        new AlwaysOnTopWindow(getApplicationContext()).show();
     }
 
     @Override
